@@ -77,6 +77,8 @@ def scenario_two():
     if selection == "b":
         print("\nCorrect - you need to allow extra distance on "
               "slippery and wet roads.")
+        time.sleep(1)
+        scenario_three()
     elif selection == "a":
         print("\nNo, you have selected the wrong answer.  The vehicle ahead "
               "breaks suddenly and despite your best efforts, you’re unable "
@@ -90,6 +92,35 @@ def scenario_two():
         print(invalid_choice)
         time.sleep(1)
         scenario_two()
+
+
+def scenario_three():
+    """
+    Function for controlling scenario three
+    """
+    print("\nThe weather improves and it becomes dry and warm. You are driving"
+          " on a 50mph road at the speed limit and you spot some stationary "
+          "traffic up ahead. \nWhat’s the minimum safe distance to "
+          "allow for stopping?\n"
+          "\nA: 53m / 175 ft\n"
+          "\nB: 36m / 120 ft\n")
+    selection = text_input()
+    if selection == "a":
+        print("\nWell done, this is the average stopping distance from 50 mph."
+              " Of course, it’s always better to allow more than you think.")
+    elif selection == "b":
+        print("\nSorry, this is not the right answer. You misjudge the "
+              "distance to the vehicles ahead and are unable to stop in time "
+              "and crash into the stationary traffic. \n"
+              "Pg. 42 of the Highway Code (2015 Edition) shows "
+              "that the stopping distance to allow, when travelling at 50 mph "
+              "on a dry road in good condition, is at least 53m / 175 ft.")
+        time.sleep(1)
+        game_over()
+    else:
+        print(invalid_choice)
+        time.sleep(1)
+        scenario_three()
 
 
 def game_over():
