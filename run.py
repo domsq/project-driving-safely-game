@@ -108,6 +108,8 @@ def scenario_three():
     if selection == "a":
         print("\nWell done, this is the average stopping distance from 50 mph."
               " Of course, it’s always better to allow more than you think.")
+        time.sleep(1)
+        scenario_four()
     elif selection == "b":
         print("\nSorry, this is not the right answer. You misjudge the "
               "distance to the vehicles ahead and are unable to stop in time "
@@ -121,6 +123,35 @@ def scenario_three():
         print(invalid_choice)
         time.sleep(1)
         scenario_three()
+
+
+def scenario_four():
+    """
+    Function for controlling scenario four
+    """
+    print("\nYou are now travelling on a dual carriageway. There is "
+          "a slow vehicle in front of you and you are considering overtaking"
+          " them on the left. Is this allowed?\n"
+          "\nA: Yes, it’s okay to overtake a slower vehicle in the "
+          "right-hand lane of a dual carriageway\n"
+          "\nB: No, you can only do this on a one-way street\n")
+    selection = text_input()
+    if selection == "b":
+        print("\nCorrect, it is okay to overtake on the left"
+              " when on a one-way street.")
+    elif selection == "a":
+        print("\nIncorrect - as you attempt to pass the vehicle the driver"
+              " has started moving over to the left to allow you past and you"
+              " crash into the other car.\n"
+              "Rule #268 of the Highway Code (pg. 89, 2015 Edition) states:"
+              " When travelling on a motorway, do not overtake on the left or "
+              "move to a lane on your left to overtake.")
+        time.sleep(1)
+        game_over()
+    else:
+        print(invalid_choice)
+        time.sleep(1)
+        scenario_four()
 
 
 def game_over():
