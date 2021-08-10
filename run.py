@@ -47,17 +47,40 @@ def scenario_one():
           "of the centre line of the road\n")
     selection = text_input()
     if selection == "a":
-        print("Well done, this is the safe way to handle the situation.")
+        print("\nWell done, this is the safe way to handle the situation.")
     elif selection == "b":
-        print("Sorry, this is the wrong answer.  The driver behind attempts to"
-              " undertake you and collides with you in the process."
+        print("\nSorry, this is the wrong answer.  The driver behind attempts "
+              "to undertake you and collides with you in the process."
               "\nRule #151 of the Highway Code (pg. 50, 2015 Edition) states: "
               "Never get so close to the vehicle in front "
               "that you cannot stop safely.")
+        time.sleep(1)
+        game_over()
     else:
         print(invalid_choice)
         time.sleep(1)
         scenario_one()
+
+
+def game_over():
+    """
+    Displays game over message and asks whether user would like to try again
+    """
+    print("\n░██████╗░░█████╗░███╗░░░███╗███████╗  \n"
+          "██╔════╝░██╔══██╗████╗░████║██╔════╝  \n"
+          "██║░░██╗░███████║██╔████╔██║█████╗░░  \n"
+          "██║░░╚██╗██╔══██║██║╚██╔╝██║██╔══╝░░  \n"
+          "╚██████╔╝██║░░██║██║░╚═╝░██║███████╗  \n"
+          "░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝  \n"
+          "\n"
+          "░█████╗░██╗░░░██╗███████╗██████╗░\n"
+          "██╔══██╗██║░░░██║██╔════╝██╔══██╗\n"
+          "██║░░██║╚██╗░██╔╝█████╗░░██████╔╝\n"
+          "██║░░██║░╚████╔╝░██╔══╝░░██╔══██╗\n"
+          "╚█████╔╝░░╚██╔╝░░███████╗██║░░██║\n"
+          "░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝\n")
+    time.sleep(1)
+    print("Want to play again? Click on 'Run Driving Safely'")
 
 
 game_start()
