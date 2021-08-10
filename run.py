@@ -3,6 +3,16 @@ import time  # Module required to add a pause as needed
 invalid_choice = ("\nNot a valid choice, please try again")
 
 
+def text_input():
+    """
+    Function to accept input when user needs to make a choice
+    """
+    choice = input("Please choose an option:- \n")
+    choice_lc = choice.lower()
+
+    return choice_lc
+
+
 def game_start():
     """
     Function to control start of game and display opening messages
@@ -12,7 +22,7 @@ def game_start():
           "\nYou’ll be presented with scenarios along the way, choose wisely"
           " as the wrong choice could end badly. \nEnjoy and have fun!\n")
     time.sleep(1)
-    name = input("Please enter your name:- ")
+    name = input("Please enter your name:- \n")
     time.sleep(1)
     print(f"\nWelcome {name}\n"
           "\nYou are going on holiday to your favourite seaside resort and "
@@ -35,11 +45,10 @@ def scenario_one():
           "between you and the car in front\n"
           "\nB: Move over towards a position a bit left "
           "of the centre line of the road\n")
-    choice = input("Please choose an option:- ")
-    choice_lc = choice.lower()
-    if choice_lc == "a":
+    selection = text_input()
+    if selection == "a":
         print("Well done, this is the safe way to handle the situation.")
-    elif choice_lc == "b":
+    elif selection == "b":
         print("Sorry, this is the wrong answer.  The driver behind attempts to"
               " undertake you and collides with you in the process."
               "\nRule #151 of the Highway Code (pg. 50, 2015 Edition) states: "
