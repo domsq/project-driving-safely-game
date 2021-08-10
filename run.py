@@ -1,5 +1,7 @@
 import time  # Module required to add a pause as needed
 
+invalid_choice = ("\nNot a valid choice, please try again")
+
 
 def game_start():
     """
@@ -16,6 +18,37 @@ def game_start():
           "\nYou are going on holiday to your favourite seaside resort and "
           "have been looking forward to the break for the last few months."
           "\nYour car is packed up and you are ready to start your journey.")
+    time.sleep(1)
+    scenario_one()
+
+
+def scenario_one():
+    """
+    Function for controlling scenario one
+    """
+    print("\nYou start the drive to your holiday accommodation and "
+          "after driving for a few miles "
+          "you encounter some slow traffic. "
+          "\nThe driver behind you seems to be following a bit too "
+          "closely, what should you do?\n"
+          "\nA: Slow down gradually, building more of a gap "
+          "between you and the car in front\n"
+          "\nB: Move over towards a position a bit left "
+          "of the centre line of the road\n")
+    choice = input("Please choose an option:- ")
+    choice_lc = choice.lower()
+    if choice_lc == "a":
+        print("Well done, this is the safe way to handle the situation.")
+    elif choice_lc == "b":
+        print("Sorry, this is the wrong answer.  The driver behind attempts to"
+              " undertake you and collides with you in the process."
+              "\nRule #151 of the Highway Code (pg. 50, 2015 Edition) states: "
+              "Never get so close to the vehicle in front "
+              "that you cannot stop safely.")
+    else:
+        print(invalid_choice)
+        time.sleep(1)
+        scenario_one()
 
 
 game_start()
