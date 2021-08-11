@@ -171,11 +171,13 @@ def scenario_five():
     if selection == "a":
         print("\nCorrect, if the road has no footpaths or pavements\n"
               "pedestrians will need to walk facing traffic.")
+        time.sleep(1)
+        scenario_six()
     elif selection == "b":
         print("\nThis is not quite the right answer. You don’t see some "
               "pedestrians \napproaching and collide with them, injuring"
               " them as a result.\n"
-              "Rule #154 of the Highway Code (pg. 51, 2015 Edition) "
+              "\nRule #154 of the Highway Code (pg. 51, 2015 Edition) "
               "advises to approach\ncountry roads with extra caution, "
               "particularly when approaching\nbends as your visibility of"
               " pedestrians, etc. may be obscured. ")
@@ -185,6 +187,37 @@ def scenario_five():
         print(invalid_choice)
         time.sleep(1)
         scenario_five()
+
+
+def scenario_six():
+    """
+    Function for controlling scenario six
+    """
+    print("\nThe road visibility improves but you need to "
+          "make a right turn into a \nside road and have a queue of traffic"
+          "behind you. Why is it a good idea to \ncheck your side mirror on "
+          "the right before you turn?\n"
+          "\nA: To see if anyone is trying to overtake you\n"
+          "\nB: To see whether the side road is clear\n")
+    selection = text_input()
+    if selection == "a":
+        print("\nCorrect, you may have a driver trying to overtake you, even "
+              "though \nthey should go around you on the left if you’re "
+              "turning right...")
+    elif selection == "b":
+        print("\nNo, this is the wrong answer. You start turning and "
+              "out of nowhere"
+              "\na car who was trying to overtake you (even though this "
+              "wouldn’t be safe \nto do) collides with you.\n"
+              "\nRule #180 of the Highway Code (pg. 62, 2015 Edition) advises"
+              "\nto check your mirrors and blind spot to ensure you’re not "
+              "being \novertaken before making the turn.")
+        time.sleep(1)
+        game_over()
+    else:
+        print(invalid_choice)
+        time.sleep(1)
+        scenario_six()
 
 
 def game_over():
