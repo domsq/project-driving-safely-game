@@ -52,7 +52,7 @@ def scenario_one():
         scenario_two()
     elif selection == "b":
         print("\nSorry, this is the wrong answer.  The driver behind attempts "
-              "\nto undertake you and collides with you in the process."
+              "\nto undertake you and collides with you in the process.\n"
               "\nRule #151 of the Highway Code (pg. 50, 2015 Edition) states: "
               "\nNever get so close to the vehicle in front "
               "that you cannot stop safely.")
@@ -82,7 +82,7 @@ def scenario_two():
     elif selection == "a":
         print("\nNo, you have selected the wrong answer.  The vehicle ahead "
               "brakes \nsuddenly and despite your best efforts, you’re unable "
-              "to stop in time \nand collide with it.\n"
+              "to stop in time \nand collide with it.\n\n"
               "Rule #227 of the Highway Code (pg. 76, 2015 Edition) states: \n"
               "In wet weather, stopping distances will be at least double "
               "those \nrequired for stopping on dry roads.")
@@ -99,24 +99,24 @@ def scenario_three():
     Function for controlling scenario three
     """
     print("\nThe weather improves and it becomes dry and warm. You are driving"
-          " on a 50mph road at the speed limit and you spot some stationary "
-          "traffic up ahead. \nWhat’s the minimum safe distance to "
+          "\non a 50mph road at the speed limit and you spot some stationary "
+          "traffic \nup ahead. What’s the minimum safe distance to "
           "allow for stopping?\n"
           "\nA: 53m / 175 ft\n"
           "\nB: 36m / 120 ft\n")
     selection = text_input()
     if selection == "a":
         print("\nWell done, this is the average stopping distance from 50 mph."
-              " Of course, it’s always better to allow more than you think.")
+              " Of course\nit’s always better to allow more than you think.")
         time.sleep(1)
         scenario_four()
     elif selection == "b":
         print("\nSorry, this is not the right answer. You misjudge the "
-              "distance to the vehicles ahead and are unable to stop in time "
-              "and crash into the stationary traffic. \n"
-              "Pg. 42 of the Highway Code (2015 Edition) shows "
-              "that the stopping distance to allow, when travelling at 50 mph "
-              "on a dry road in good condition, is at least 53m / 175 ft.")
+              "distance to the \nvehicles ahead and are unable to stop in "
+              "time and crash into the \nstationary traffic. \n"
+              "\nPg. 42 of the Highway Code (2015 Edition) shows "
+              "that the stopping \ndistance to allow when travelling at 50mph "
+              "on a dry road in good \ncondition is at least 53m / 175 ft.")
         time.sleep(1)
         game_over()
     else:
