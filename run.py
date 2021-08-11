@@ -37,10 +37,10 @@ def scenario_one():
     Function for controlling scenario one
     """
     print("\nYou start the drive to your holiday accommodation and "
-          "after driving for a few miles "
+          "after driving\nfor a few miles "
           "you encounter some slow traffic. "
           "\nThe driver behind you seems to be following a bit too "
-          "closely, what should you do?\n"
+          "closely\nwhat should you do?\n"
           "\nA: Slow down gradually, building more of a gap "
           "between you and the car in front\n"
           "\nB: Move over towards a position a bit left "
@@ -52,9 +52,9 @@ def scenario_one():
         scenario_two()
     elif selection == "b":
         print("\nSorry, this is the wrong answer.  The driver behind attempts "
-              "to undertake you and collides with you in the process."
+              "\nto undertake you and collides with you in the process."
               "\nRule #151 of the Highway Code (pg. 50, 2015 Edition) states: "
-              "Never get so close to the vehicle in front "
+              "\nNever get so close to the vehicle in front "
               "that you cannot stop safely.")
         time.sleep(1)
         game_over()
