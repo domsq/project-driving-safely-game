@@ -42,7 +42,7 @@ def scenario_one():
           "\nThe driver behind you seems to be following a bit too "
           "closely\nwhat should you do?\n"
           "\nA: Slow down gradually, building more of a gap "
-          "between you and the car in front\n"
+          "between you\nand the car in front\n"
           "\nB: Move over towards a position a bit left "
           "of the centre line of the road\n")
     selection = text_input()
@@ -68,8 +68,8 @@ def scenario_two():
     """
     Function for controlling scenario two
     """
-    print("\nThe traffic improves but it starts to rain quite heavily. \n"
-          "You are travelling behind another vehicle, how much of a "
+    print("\nThe traffic improves but it starts to rain quite heavily. "
+          "You are \ntravelling behind another vehicle, how much of a "
           "time gap should you allow?\n"
           "\nA: Three Seconds\n"
           "\nB: Four Seconds\n")
@@ -81,11 +81,11 @@ def scenario_two():
         scenario_three()
     elif selection == "a":
         print("\nNo, you have selected the wrong answer.  The vehicle ahead "
-              "breaks suddenly and despite your best efforts, you’re unable "
-              "to stop in time and collide with it.\n"
-              "Rule #227 of the Highway Code (pg. 76, 2015 Edition) states: "
+              "brakes \nsuddenly and despite your best efforts, you’re unable "
+              "to stop in time \nand collide with it.\n"
+              "Rule #227 of the Highway Code (pg. 76, 2015 Edition) states: \n"
               "In wet weather, stopping distances will be at least double "
-              "those required for stopping on dry roads.")
+              "those \nrequired for stopping on dry roads.")
         time.sleep(1)
         game_over()
     else:
