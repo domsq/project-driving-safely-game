@@ -139,6 +139,8 @@ def scenario_four():
     if selection == "b":
         print("\nCorrect, it is okay to overtake on the left"
               " when on a one-way street.")
+        time.sleep(1)
+        scenario_five()
     elif selection == "a":
         print("\nIncorrect - as you attempt to pass the vehicle the driver"
               " has started moving over to the left to allow you past and you"
@@ -152,6 +154,37 @@ def scenario_four():
         print(invalid_choice)
         time.sleep(1)
         scenario_four()
+
+
+def scenario_five():
+    """
+    Function for controlling scenario five
+    """
+    print("\nYou are now driving through some countryside on a road that has "
+          "some high \nhedges on either side of it."
+          " You come up to a left-hand bend"
+          " and are \nconcerned about the lack of visibility of the road ahead"
+          " caused\nby the hedges. What should you watch out for?\n"
+          "\nA: Pedestrians coming towards you\n"
+          "\nB: No sign to warn of the bend\n")
+    selection = text_input()
+    if selection == "a":
+        print("\nCorrect, if the road has no footpaths or pavements\n"
+              "pedestrians will need to walk facing traffic.")
+    elif selection == "b":
+        print("\nThis is not quite the right answer. You don’t see some "
+              "pedestrians \napproaching and collide with them, injuring"
+              " them as a result.\n"
+              "Rule #154 of the Highway Code (pg. 51, 2015 Edition) "
+              "advises to approach\ncountry roads with extra caution, "
+              "particularly when approaching\nbends as your visibility of"
+              " pedestrians, etc. may be obscured. ")
+        time.sleep(1)
+        game_over()
+    else:
+        print(invalid_choice)
+        time.sleep(1)
+        scenario_five()
 
 
 def game_over():
