@@ -130,10 +130,10 @@ def scenario_four():
     Function for controlling scenario four
     """
     print("\nYou are now travelling on a dual carriageway. There is "
-          "a slow vehicle in front of you and you are considering overtaking"
-          " them on the left. Is this allowed?\n"
+          "a slow vehicle \nin front of you and you are considering overtaking"
+          " them on the left. \nIs this allowed?\n"
           "\nA: Yes, it’s okay to overtake a slower vehicle in the "
-          "right-hand lane of a dual carriageway\n"
+          "right-hand lane of a \ndual carriageway\n"
           "\nB: No, you can only do this on a one-way street\n")
     selection = text_input()
     if selection == "b":
@@ -143,11 +143,11 @@ def scenario_four():
         scenario_five()
     elif selection == "a":
         print("\nIncorrect - as you attempt to pass the vehicle the driver"
-              " has started moving over to the left to allow you past and you"
-              " crash into the other car.\n"
+              " has started \nmoving over to the left to allow you past and"
+              " you crash into the other car.\n\n"
               "Rule #268 of the Highway Code (pg. 89, 2015 Edition) states:"
-              " When travelling on a motorway, do not overtake on the left or "
-              "move to a lane on your left to overtake.")
+              "\nWhen travelling on a motorway, do not overtake on the left or"
+              " move \nto a lane on your left to overtake.")
         time.sleep(1)
         game_over()
     else:
