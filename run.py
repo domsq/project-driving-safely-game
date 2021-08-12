@@ -2,7 +2,151 @@ import time  # Module required to add a pause as needed
 
 invalid_choice = ("\nNot a valid choice, please try again\n")
 
+# Scenario content moved to list as discussed with mentor
+SCENARIOS = [
+  {
+    "question": "\nYou start the drive to your holiday accommodation and " +
+                "after driving\nfor a few miles " +
+                "you encounter some slow traffic. " +
+                "\nThe driver behind you seems to be following a bit too " +
+                "closely\nwhat should you do?\n" +
+                "\nA: Slow down gradually, building more of a gap " +
+                "between you\nand the car in front\n" +
+                "\nB: Move over towards a position a bit left " +
+                "of the centre line of the road\n",
+    "correct_answer": "\nWell done, this is the safe way to handle " +
+                      "the situation.",
+    "wrong_answer": "\nSorry, this is the wrong answer. " +
+                    "The driver behind attempts " +
+                    "\nto undertake you and collides " +
+                    "with you in the process.\n" +
+                    "\nRule #151 of the Highway Code " +
+                    "(pg. 50, 2015 Edition) states: " +
+                    "\nNever get so close to the vehicle in front " +
+                    "that you cannot stop safely.",
+    "correct_choice": "a"
+  },
+  {
+    "question": "\nThe traffic improves but it starts to rain quite heavily." +
+                " You are \ntravelling behind another vehicle, how much of a" +
+                " time gap should you allow?\n" +
+                "\nA: Three Seconds\n" +
+                "\nB: Four Seconds\n",
+    "correct_answer": "\nCorrect - you need to allow extra distance on " +
+                      "slippery and wet roads.",
+    "wrong_answer": "\nNo, you have selected the wrong answer. " +
+                    "The vehicle ahead " +
+                    "brakes \nsuddenly and despite your best " +
+                    "efforts, you’re unable " +
+                    "to stop in time \nand collide with it.\n\n" +
+                    "Rule #227 of the Highway Code (pg. 76, 2015 " +
+                    "Edition) states: \n" +
+                    "In wet weather, stopping distances will be " +
+                    "at least double " +
+                    "those \nrequired for stopping on dry roads.",
+    "correct_choice": "b"
+  },
+  {
+    "question": "\nThe weather improves and it becomes dry and warm. " +
+                "You are driving" +
+                "\non a 50mph road at the speed limit and you spot " +
+                "some stationary " +
+                "traffic \nup ahead. What’s the minimum safe distance to " +
+                "allow for stopping?\n" +
+                "\nA: 53m / 175 ft\n" +
+                "\nB: 36m / 120 ft\n",
+    "correct_answer": "\nWell done, this is the average stopping " +
+                      "distance from 50 mph." +
+                      " Of course\nit’s always better to allow more " +
+                      "than you think.",
+    "wrong_answer": "\nSorry, this is not the right answer. You " +
+                    "misjudge the " +
+                    "distance to the \nvehicles ahead and are " +
+                    "unable to stop in " +
+                    "time and crash into the \nstationary traffic. \n" +
+                    "\nPg. 42 of the Highway Code (2015 Edition) shows " +
+                    "that the stopping \ndistance to allow when " +
+                    "travelling at 50mph " +
+                    "on a dry road in good \ncondition is at least " +
+                    "53m / 175 ft.",
+    "correct_choice": "a"
+   },
+  {
+    "question": "\nYou are now travelling on a dual carriageway. There is " +
+                "a slow vehicle \nin front of you and you are " +
+                "considering overtaking" +
+                " them on the left. \nIs this allowed?\n" +
+                "\nA: Yes, it’s okay to overtake a slower vehicle in the " +
+                "right-hand lane of a \ndual carriageway\n" +
+                "\nB: No, you can only do this on a one-way street\n",
+    "correct_answer": "\nCorrect, it is okay to overtake on the left" +
+                      " when on a one-way street.",
+    "wrong_answer": "\nIncorrect - as you attempt to pass the " +
+                    "vehicle the driver" +
+                    " has started \nmoving over to the left to allow " +
+                    "you past and" +
+                    " you crash into the other car.\n\n" +
+                    "Rule #268 of the Highway Code (pg. 89, 2015 " +
+                    "Edition) states:" +
+                    "\nWhen travelling on a motorway, do not overtake " +
+                    "on the left or" +
+                    " move \nto a lane on your left to overtake.",
+    "correct_choice": "b"
+    },
+  {
+    "question": "\nYou are now driving through some countryside on a " +
+                "road that has " +
+                "some high \nhedges on either side of it." +
+                " You come up to a left-hand bend" +
+                " and are \nconcerned about the lack of visibility of " +
+                "the road ahead" +
+                " caused\nby the hedges. What should you watch out for?\n" +
+                "\nA: Pedestrians coming towards you\n" +
+                "\nB: No sign to warn of the bend\n",
+    "correct_answer": "\nCorrect, if the road has no footpaths " +
+                      "or pavements\n" +
+                      "pedestrians will need to walk facing traffic.",
+    "wrong_answer": "\nThis is not quite the right answer. You don’t " +
+                    "see some " +
+                    "pedestrians \napproaching and collide with them, " +
+                    "injuring them as a result.\n" +
+                    "\nRule #154 of the Highway Code (pg. 51, 2015 Edition) " +
+                    "advises to approach\ncountry roads with extra caution, " +
+                    "particularly when approaching\nbends as your " +
+                    "visibility of" +
+                    " pedestrians, etc. may be obscured. ",
+    "correct_choice": "a"
+    },
+  {
+    "question": "\nThe road visibility improves but you need to " +
+                "make a right turn into a \nside road and have a " +
+                "queue of traffic " +
+                "behind you. Why is it a good idea to \ncheck your " +
+                "side mirror on " +
+                "the right before you turn?\n" +
+                "\nA: To see if anyone is trying to overtake you\n" +
+                "\nB: To see whether the side road is clear\n",
+    "correct_answer": "\nCorrect, you may have a driver trying to " +
+                      "overtake you, even " +
+                      "though \nthey should go around you on the left" +
+                      " if you’re " +
+                      "turning right...",
+    "wrong_answer": "\nNo, this is the wrong answer. You start turning and " +
+                    "out of nowhere" +
+                    "\na car who was trying to overtake you (even " +
+                    "though this " +
+                    "wouldn’t be safe \nto do) collides with you.\n" +
+                    "\nRule #180 of the Highway Code (pg. 62, 2015 " +
+                    "Edition) advises" +
+                    "\nto check your mirrors and blind spot to " +
+                    "ensure you’re not " +
+                    "being \novertaken before making the turn.",
+    "correct_choice": "a"
+    }
+]
 
+
+# Amended following discussion with mentor
 def text_input():
     """
     Function to accept input when user needs to make a choice
