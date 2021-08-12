@@ -180,7 +180,27 @@ SCENARIOS = [
                     "Edition) states: \nDo not leave a parked vehicle " +
                     "unattended with the engine running. ",
     "correct_choice": "a"
-    }
+    },
+  {
+    "question": "\nYou are back on the road again and you suddenly realise " +
+                "you’re travelling\nagainst the flow of traffic. What’s " +
+                "the best thing to do?\n" +
+                "\nA: Perform a three-point turn to get yourself facing " +
+                "the right way\n" +
+                "\nB: Pull into a side road and turn around\n",
+    "correct_answer": "\nYes, this would be the safest option. You turn off " +
+                      "into a side road\nget safely turned around and " +
+                      "continue on your way. ",
+    "wrong_answer": "\nThis is not the thing to do... while executing " +
+                    "a three-point " +
+                    "turn \na vehicle doesn’t see you in time and " +
+                    "collides with you.\n" +
+                    "\nRule #143 of the Highway Code (pg. 47, 2015 " +
+                    "Edition) states: \nYou must travel in the direction " +
+                    "of the road system and should choose \nthe " +
+                    "correct lane to exit ASAP.",
+    "correct_choice": "b"
+  }
 ]
 
 
