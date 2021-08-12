@@ -162,6 +162,24 @@ SCENARIOS = [
                     "cause by releasing the brake pedal fully \nor " +
                     "easing off the accelerator. ",
     "correct_choice": "b"
+    },
+  {
+    "question": "\nYou start driving through a tunnel and notice what " +
+                "seems to be a \nburning smell coming from your car. The " +
+                "car isn’t showing any warning lights\nand still seems " +
+                "to be driveable, what should you do?\n" +
+                "\nA: Drive it out of the tunnel if you can \n" +
+                "\nB: Pull up, then walk to an emergency phone\n",
+    "correct_answer": "\nThis is the safest course of action, well done. " +
+                      "You get your car out \nof the tunnel, find a safe " +
+                      "place to pull over and contact your " +
+                      "roadside \nassistance company. ",
+    "wrong_answer": "\nThis isn’t the right thing to do... your car bursts " +
+                    "into flames \ncausing a serious issue. \n" +
+                    "\nRule #123 of the Highway Code (pg. 40, 2015 " +
+                    "Edition) states: \nDo not leave a parked vehicle " +
+                    "unattended with the engine running. ",
+    "correct_choice": "a"
     }
 ]
 
