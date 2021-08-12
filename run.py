@@ -143,6 +143,25 @@ SCENARIOS = [
                     "ensure you’re not " +
                     "being \novertaken before making the turn.",
     "correct_choice": "a"
+    },
+  {
+    "question": "\nYou notice that it has started raining again. You spot " +
+                "a hazard ahead \nthat you need to slow down for and " +
+                "attempt to brake " +
+                "but your \nanti-lock brakes don’t seem to be working. " +
+                "Your car starts to skid. \nWhat should you do next?\n"
+                "\nA: Use the handbrake to see if this helps\n"
+                "\nB: Release the brake pedal\n",
+    "correct_answer": "\nCorrect, you’d need to initially release the " +
+                      "brake pedal to stop the skid \nand then try " +
+                      "carefully applying it again.",
+    "wrong_answer": "\nWrong, this causes your car to go into a sideways " +
+                    "slide and you \ncollide with another car.\n" +
+                    "\nRule #119 of the Highway Code (pg.38, 2015 " +
+                    "Edition) states: \nIf skidding occurs, remove the " +
+                    "cause by releasing the brake pedal fully \nor " +
+                    "easing off the accelerator. ",
+    "correct_choice": "b"
     }
 ]
 
