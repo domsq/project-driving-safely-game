@@ -1,6 +1,7 @@
 import time  # Module required to add a pause as needed
 
 invalid_choice = ("\nNot a valid choice, please try again\n")
+current_scenario_index = -1
 
 # Scenario content moved to list as discussed with mentor
 SCENARIOS = [
@@ -177,6 +178,22 @@ def game_start():
           "\nYour car is packed up and you are ready to start your journey.")
     time.sleep(1)
     scenario_one()
+
+
+# Function to load scenarios as discussed with mentor
+def load_next_scenario():
+    """
+    Function to load next scenario from list "SCENARIOS".
+    Will also finish game if all scenarios completed.
+    """
+    global current_scenario_index
+    current_scenario_index = current_scenario_index + 1
+    if current_scenario_index == len(SCENARIOS):
+        print("You won!")
+        return
+    else:
+        scenario = SCENARIOS[current_scenario_index]
+        show_scenario(scenario)
 
 
 def scenario_one():
