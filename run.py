@@ -177,7 +177,7 @@ def game_start():
           "have \nbeen looking forward to the break for the last few months."
           "\nYour car is packed up and you are ready to start your journey.")
     time.sleep(1)
-    scenario_one()
+    load_next_scenario()
 
 
 # Function to load scenarios as discussed with mentor
@@ -194,6 +194,23 @@ def load_next_scenario():
     else:
         scenario = SCENARIOS[current_scenario_index]
         show_scenario(scenario)
+
+
+# Function to display current scenario, as discussed with mentor
+def show_scenario(scenario):
+    """
+    Function for displaying of current scenario
+    """
+    print(scenario["question"])
+    selection = text_input()
+    if selection == scenario["correct_choice"]:
+        print(scenario["correct_answer"])
+        time.sleep(1)
+        load_next_scenario()
+    else:
+        print(scenario["wrong_answer"])
+        time.sleep(1)
+        game_over()
 
 
 def scenario_one():
