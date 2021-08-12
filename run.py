@@ -200,6 +200,28 @@ SCENARIOS = [
                     "of the road system and should choose \nthe " +
                     "correct lane to exit ASAP.",
     "correct_choice": "b"
+  },
+  {
+    "question": "\nYou are nearly at your seaside destination and need " +
+                "to make a left turn \ninto a side road. What should you be " +
+                "watching out for most?\n" +
+                "\nA: Vehicles parked on either side\n" +
+                "\nB: Pedestrians\n",
+    "correct_answer": "\nCorrect, you’ll want to keep a watch for any " +
+                      "pedestrians. You notice \na pedestrian enter the road" +
+                      " as you turn down it and avoid them successfully.\n" +
+                      "\nYou have reached your destination and are ready " +
+                      "to begin your holiday!",
+    "wrong_answer": "\nWhile you should always be on the lookout for other " +
+                    "vehicles, it’s \npedestrians you need to keep an eye " +
+                    "out for here. You fail to see a\npedestrian step into " +
+                    "the road and collide with them, causing them " +
+                    "\nsome moderate injuries. \n" +
+                    "\nRule #170 of the Highway Code (pg. 58, 2015 " +
+                    "Edition) states: \nPedestrians who are already " +
+                    "crossing a road into which you are "
+                    "turning\nhave right of way.",
+    "correct_choice": "b"
   }
 ]
 
