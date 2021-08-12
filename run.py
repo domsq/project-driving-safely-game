@@ -1,6 +1,6 @@
 import time  # Module required to add a pause as needed
 
-invalid_choice = ("\nNot a valid choice, please try again")
+invalid_choice = ("\nNot a valid choice, please try again\n")
 
 
 def text_input():
@@ -9,6 +9,9 @@ def text_input():
     """
     choice = input("Please choose an option:- \n")
     choice_lc = choice.lower()
+    if choice_lc not in ['a', 'b']:
+        print(invalid_choice)
+        return text_input()
 
     return choice_lc
 
@@ -194,7 +197,7 @@ def scenario_six():
     Function for controlling scenario six
     """
     print("\nThe road visibility improves but you need to "
-          "make a right turn into a \nside road and have a queue of traffic"
+          "make a right turn into a \nside road and have a queue of traffic "
           "behind you. Why is it a good idea to \ncheck your side mirror on "
           "the right before you turn?\n"
           "\nA: To see if anyone is trying to overtake you\n"
