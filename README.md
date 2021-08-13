@@ -76,6 +76,16 @@ If the user successfully makes it through all scenarios, a "well done" message i
 
 ## Technologies Used
 
+- HTML - Required for the emulated terminal as provided by Code Institute
+- CSS - Required for the emulated terminal as provided by Code Institute
+- JavaScript - Required for the emulated terminal as provided by Code Institute
+- Python - Language that the app is written in
+- Gitpod - IDE used for development, incorporates git version control
+- GitHub - Repository where code is kept and also git version control
+- Heroku - Platform through which app is deployed
+- [fsymbols](https://fsymbols.com/text-art/) - Used for creation of ascii word art
+- [Text to ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - Used for creation of ascii word art
+- [Ascii Art converter](https://manytools.org/hacker-tools/convert-images-to-ascii-art/) - Used for creation of ascii art image
 
 ## Testing
 
