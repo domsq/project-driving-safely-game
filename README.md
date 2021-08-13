@@ -19,7 +19,7 @@ The app has functions for the following:
 As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they don't, then a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all scenarios then a game completion message is displayed.
 
 
-![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/master/screenshots/flow_digram.JPG)
+![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/flow_diagram.JPG)
 
 As the app is command line based, there are no graphics or colour, etc present however I have inserted some ascii art to make the display a bit more visually pleasing for the user. 
 
@@ -44,11 +44,35 @@ User stories as follows:
 
 ### Existing Features
 
+The app has a button at the top to restart it at any point (initial loading of the page starts the app automatically):
 
+![Image of run button](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/run_button.JPG)
+
+It also has an intro message, welcoming the user to the game and briefly explaining how to play it:
+
+![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)
+
+Below the intro message is an ascii art image followed by a prompt for the user to enter a name:
+
+![Image of intro graphic](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_image.JPG)
+
+Playing through the game will present different scenarios as the user progresses:
+
+![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)
+
+Selecting a wrong choice will result in a game over condition:
+
+![Image of game over message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/game_over.JPG)
+
+If the user successfully makes it through all scenarios, a "well done" message is shown:
+
+![Image of game completion message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/well_done.JPG)
 
 ### Features Left to Implement
 
-
+- Add additional scenarios and \ or choice options 
+- Increase the number of paths a user could take through the game to reach the end
+- Implement a scoring system 
 
 ## Technologies Used
 
