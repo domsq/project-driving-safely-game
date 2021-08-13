@@ -89,7 +89,31 @@ If the user successfully makes it through all scenarios, a "well done" message i
 
 ## Testing
 
+-	A new driver is looking to test their road safety knowledge<br><br>
+The user will land on the intro message which explains what the app is about:<br>
+![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)<br>
+Once they've entered a name, they'll move onto the scenarios to play through:<br>
+![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)<br><br>
+-	An experienced driver is looking to challenge, and possibly brush up on, their knowledge of road safety<br><br>
+The user has various scenarios to play through, to test their knowledge:<br>
+![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)<br><br>
+-	A non driver is looking to play a game to learn more about driving theory and road safety<br><br>
+There are various scenarios which are based on actual road safety questions for the user to attempt:<br>
+![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)<br><br>
 
+The app has been tested using the following browsers:<br>
+- Google Chrome<br>
+- Microsoft Edge<br>
+- Mozilla Firefox<br><br>
+
+I played through the app multiple times from beginning to end to ensure the logic flows as expected. I also had my wife test the game to make sure it ran okay for her. 
+When tested on a PC, the app displays as expected and functions as required. 
+
+The app was also tested on both Samsung Galaxy S20 FE 5G and Oppo Find X2 Lite handsets and while it is playable on a mobile phone, it is best experienced using a PC browser. 
+
+I tested that when presented with a choice in the game, the text input has to be a valid option as otherwise you are presented with a "Not a valid choice, please try again" message. You are then prompted to input text again, until a valid choice has been entered.
+
+The scenarios are loaded in turn as expected and getting through all of them successfully triggers a game completion condition. If a wrong choice is picked, the game over condition is triggered. 
 
 ### Bugs 
 
