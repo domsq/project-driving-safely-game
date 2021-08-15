@@ -1,6 +1,10 @@
 import time  # Module required to add a pause as needed
 # Scenario content moved to config.py file as discussed with mentor
 from config import SCENARIOS
+# Moved ascii art and message text to constants.py,
+# as discussed with mentor
+from constants import (GAME_LOGO, WELCOME_MESSAGE, INTRO_IMAGE,
+                       INTRO_TEXT, WELL_DONE, GAME_OVER)
 
 invalid_choice = ("\nNot a valid choice, please try again\n")
 current_scenario_index = -1
@@ -24,48 +28,15 @@ def game_start():
     """
     Function to control start of game and display opening messages
     """
-    print("███████████████████████████████████████▀███\n"
-          "█▄─▄▄▀█▄─▄▄▀█▄─▄█▄─█─▄█▄─▄█▄─▀█▄─▄█─▄▄▄▄███\n"
-          "██─██─██─▄─▄██─███▄▀▄███─███─█▄▀─██─██▄─███\n"
-          "▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▄▀▀▀▄▀▀▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▀▀\n"
-          "█████████████████████████████████████\n"
-          "█─▄▄▄▄██▀▄─██▄─▄▄─█▄─▄▄─█▄─▄███▄─█─▄█\n"
-          "█▄▄▄▄─██─▀─███─▄████─▄█▀██─██▀██▄─▄██\n"
-          "▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀▀▀▄▄▄▄▄▀▄▄▄▄▄▀▀▄▄▄▀▀\n")
-    print("Welcome to Driving Safely. The aim is to get to your "
-          "destination\nwithout incident. "
-          "You’ll be presented with scenarios along the way\nso choose wisely"
-          " as the wrong choice could end badly.\n\nEnjoy and have fun!\n")
+    print(GAME_LOGO)
+    print(WELCOME_MESSAGE)
     time.sleep(1)
-    print("                                                            \n"
-          "                      ,,,,,,,,,,,,,,,,,                     \n"
-          "                 ,,,,,,,,,,,,,,,,,,,,,,,,,,,                \n"
-          "             ,,,,,,,,,                 ,,,,,,,,,            \n"
-          "           ,,,,,,,                         ,,,,,,,          \n"
-          "         ,,,,,,                               ,,,,,,        \n"
-          "       .,,,,,,                                  ,,,,,,      \n"
-          "      .......                                   .,,,,,,     \n"
-          "     .....                                         .....    \n"
-          "     #*&               @@@&@@@&@@@&@@@               &*#    \n"
-          "    ......       .@@@@@@@&.........##@@@@@&..      ......   \n"
-          "    .............@@@@@@##..       ..#%@@@@@&.............   \n"
-          "    ............*@@@@@@##..      ...#%@@@@&&.............   \n"
-          "    ........         ,@@##........%&&@,           ......    \n"
-          "     .....              *@@@@@#@@%@@               .....    \n"
-          "     .....                @@@@@@@@@                ....     \n"
-          "       .....              &&&&&&@&               .....      \n"
-          "         ....,             &@&&&@&             .....        \n"
-          "          ...*%...        ........         ...%*..          \n"
-          "              ........   ..........    ........             \n"
-          "                 ...........................                \n"
-          "                                                            \n")
+    print(INTRO_IMAGE)
     time.sleep(1)
     name = input("Please enter your name:- \n")
     time.sleep(1)
-    print(f"\nWelcome {name}\n"
-          "\nYou are going on holiday to your favourite seaside resort and "
-          "have \nbeen looking forward to the break for the last few months."
-          "\nYour car is packed up and you are ready to start your journey.")
+    print(f"\nWelcome {name}\n")
+    print(INTRO_TEXT)
     time.sleep(1)
     load_next_scenario()
 
@@ -81,18 +52,7 @@ def load_next_scenario():
     global current_scenario_index
     current_scenario_index = current_scenario_index + 1
     if current_scenario_index == len(SCENARIOS):
-        print("\n██     ██ ███████ ██      ██          \n"
-              "██     ██ ██      ██      ██          \n"
-              "██  █  ██ █████   ██      ██          \n"
-              "██ ███ ██ ██      ██      ██          \n"
-              " ███ ███  ███████ ███████ ███████     \n"
-              "\n"
-              "\n"
-              "██████   ██████  ███    ██ ███████ ██ \n"
-              "██   ██ ██    ██ ████   ██ ██      ██ \n"
-              "██   ██ ██    ██ ██ ██  ██ █████   ██ \n"
-              "██   ██ ██    ██ ██  ██ ██ ██         \n"
-              "██████   ██████  ██   ████ ███████ ██ \n")
+        print(WELL_DONE)
         return
     else:
         scenario = SCENARIOS[current_scenario_index]
@@ -120,19 +80,7 @@ def game_over():
     """
     Displays game over message and asks whether user would like to try again
     """
-    print("\n░██████╗░░█████╗░███╗░░░███╗███████╗  \n"
-          "██╔════╝░██╔══██╗████╗░████║██╔════╝  \n"
-          "██║░░██╗░███████║██╔████╔██║█████╗░░  \n"
-          "██║░░╚██╗██╔══██║██║╚██╔╝██║██╔══╝░░  \n"
-          "╚██████╔╝██║░░██║██║░╚═╝░██║███████╗  \n"
-          "░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝  \n"
-          "\n"
-          "░█████╗░██╗░░░██╗███████╗██████╗░\n"
-          "██╔══██╗██║░░░██║██╔════╝██╔══██╗\n"
-          "██║░░██║╚██╗░██╔╝█████╗░░██████╔╝\n"
-          "██║░░██║░╚████╔╝░██╔══╝░░██╔══██╗\n"
-          "╚█████╔╝░░╚██╔╝░░███████╗██║░░██║\n"
-          "░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝\n")
+    print(GAME_OVER)
     time.sleep(1)
     print("Want to play again? Click on 'Run Driving Safely'")
 
