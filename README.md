@@ -6,22 +6,22 @@ Driving Safely is a game where users attempt to make it successfully through all
 
 ## UX
 
-I've designed the app to function like an interactive story, whereby users will be presented with choices as they progress through the scenarios, and depending on the choice made this will determine whether the story progresses or not. Whether a right or wrong choice is made, the game shows a corresponding answer and so is also educational as well. If the user makes a wrong choice and this causes a game over condition, it will also provide details of the relevant part of The Highway Code that explains this. The game is played from an emulated terminal and so is command line based, input is via keyboard entry. 
+I've designed the game to function like an interactive story, whereby users will be presented with choices as they progress through the scenarios, and depending on the choice made this will determine whether the story progresses or not. Whether a right or wrong choice is made, the game shows a corresponding answer and so is also educational as well. If the user makes a wrong choice and this causes a game over condition, it will also provide details of the relevant part of The Highway Code that explains this. The game is played from an emulated terminal and so is command line based, input is via keyboard entry. 
 
-The app has functions for the following:
+The game has functions for the following:
 - To handle the game start
 - Text input with validation when having to make a choice
 - Loading of the next scenario
 - Displaying of current scenario content and evaluating the choice made
 - Handling a game over condition 
-- Handling game successful completion 
+- Handling game successful completion
+- Asking whether the user would like to play again 
 
-As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they don't, then a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all scenarios then a game completion message is displayed.
-
+As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they don't, then a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all scenarios then a well done message is displayed which also asks whether they'd like to play again. 
 
 ![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/flow_diagram.JPG)
 
-As the app is command line based, there are no graphics or colour, etc present however I have inserted some ascii art to make the display a bit more visually pleasing for the user. 
+As the game is command line based, there are no graphics or colour, etc present however I have inserted some ascii art to make the display a bit more visually pleasing for the user. 
 
 User stories as follows:
 
@@ -44,7 +44,7 @@ User stories as follows:
 
 ### Existing Features
 
-The app has a button at the top to restart it at any point (initial loading of the page starts the app automatically):
+The game has a button at the top to restart it at any point (initial loading of the page starts the app automatically):
 
 ![Image of run button](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/run_button.JPG)
 
@@ -68,6 +68,10 @@ If the user successfully makes it through all scenarios, a "well done" message i
 
 ![Image of game completion message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/well_done.JPG)
 
+Upon either a game over condition or successful game completion, the user is presented with an option to play again:
+
+![Image of play again prompt](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/play_again.JPG)
+
 ### Features Left to Implement
 
 - Add additional scenarios and \ or choice options 
@@ -90,7 +94,7 @@ If the user successfully makes it through all scenarios, a "well done" message i
 ## Testing
 
 -	A new driver is looking to test their road safety knowledge<br><br>
-The user will land on the intro message which explains what the app is about:<br>
+The user will land on the intro message which explains what the game is about:<br>
 ![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)<br>
 Once they've entered a name, they'll move onto the scenarios to play through:<br>
 ![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)<br><br>
@@ -101,21 +105,27 @@ The user has various scenarios to play through, to test their knowledge:<br>
 There are various scenarios which are based on actual road safety questions for the user to attempt:<br>
 ![Image of a scenario](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/scenario.JPG)<br><br>
 
-The app has been tested using the following browsers:<br>
+The game has been tested using the following browsers:<br>
 - Google Chrome<br>
 - Microsoft Edge<br>
 - Mozilla Firefox<br><br>
 
-I played through the app multiple times from beginning to end to ensure the logic flows as expected. I also had my wife test the game to make sure it ran okay for her. 
-When tested on a PC, the app displays as expected and functions as required. 
+I played through the game multiple times from beginning to end to ensure the logic flows as expected. I also had my wife test the game to make sure it ran okay for her. 
+When tested on a PC, the game displays as expected and functions as required. 
 
-The app was also tested on both Samsung Galaxy S20 FE 5G and Oppo Find X2 Lite handsets and while it is playable on a mobile phone, it is best experienced using a PC browser. 
+The game was also tested on both Samsung Galaxy S20 FE 5G and Oppo Find X2 Lite handsets and while it is playable on a mobile phone, it is best experienced using a PC browser. 
 
 I tested that when presented with a choice in the game, the text input has to be a valid option as otherwise you are presented with a "Not a valid choice, please try again" message. You are then prompted to input text again, until a valid choice has been entered.
 
 The scenarios are loaded in turn as expected and getting through all of them successfully triggers a game completion condition. If a wrong choice is picked, the game over condition is triggered. 
 
 ### Bugs 
+
+While creating my application, the following bugs popped up:<br>
+- Initially when setting up the logic to evaluate the user choices for the scenarios, I tried to use syntax such as "if choice == "a" or "A". This doesn't work, so I rather set input to be made lowercase prior to being evaluated.
+- Another issue I encountered was getting text to display correctly when in Heroku, without any wrapping of words being split part way through. This was corrected through carefully limiting how much text is shown per line.
+- When initially trying to reference the dictionary keys for the scenario objects, from within the show_scenario function, this wouldn't work due to my forgetting the required "[ ]" characters. Once this was corrected, the scenarios would then load as expected.
+- When creating and testing the play_again function, it didn't initially work due to the fact that it wasn't resetting the scenario index each time, so the value was getting out of sync. This was corrected through referencing the global variable for the scenario index and setting it accordingly.
 
 
 ### Validator Testing
