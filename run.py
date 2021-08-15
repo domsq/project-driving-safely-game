@@ -53,7 +53,7 @@ def load_next_scenario():
     current_scenario_index = current_scenario_index + 1
     if current_scenario_index == len(SCENARIOS):
         print(WELL_DONE)
-        return
+        play_again()
     else:
         scenario = SCENARIOS[current_scenario_index]
         show_scenario(scenario)
@@ -82,7 +82,26 @@ def game_over():
     """
     print(GAME_OVER)
     time.sleep(1)
-    print("Want to play again? Click on 'Run Driving Safely'")
+    play_again()
+
+
+# Added function as a way to restart game upon game over or completion
+# following discussion with mentor
+def play_again():
+    """
+    Asks whether user would like to play again and restarts game if required,
+    upon game over or game completion
+    """
+    continue_choice = input("Want to play again? Y/N\n")
+    if continue_choice in ["y", "Y"]:
+        global current_scenario_index
+        current_scenario_index = -1
+        game_start()
+    elif continue_choice in ["n", "N"]:
+        print("\nNo worries, see you later!")
+    else:
+        print(invalid_choice)
+        return play_again()
 
 
 game_start()
