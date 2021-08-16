@@ -126,7 +126,7 @@ The scenarios are loaded in turn as expected and getting through all of them suc
 
 Upon either game over or game completion, you are prompted as to whether you'd like to play again. If "y" is selected, this restarts the game and if "n" is selected, this ends the program. If an invalid choice is made, you are prompted to choose an option until a valid choice is selected.
 
-While coding the application in Gitpod, I paid careful attention to the "Problems" tab. As and when any reported issues arose, I would work through resolving these before moving on to add any further code. I was also checking that any newly added code functioned as expected and regularly throughout the build process used the [PEP8 checker](www.pep8online.com) as well, to ensure my code was valid. 
+While coding the application in Gitpod, I paid careful attention to the "Problems" tab. As and when any reported issues arose, I would work through resolving these before moving on to add any further code. I was also checking that any newly added code functioned as expected and regularly throughout the build process used the [PEP8 checker](http://www.pep8online.com) as well, to ensure my code was valid. 
 
 ### Bugs 
 
