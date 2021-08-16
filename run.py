@@ -8,6 +8,18 @@ from constants import (GAME_LOGO, WELCOME_MESSAGE, INTRO_IMAGE,
 
 invalid_choice = ("\nNot a valid choice, please try again\n")
 current_scenario_index = -1
+name = None
+
+
+def enter_name():
+    """
+    Function to accept and validate name input
+    """
+    name_entry = input("Please enter your name:- (Min 3 characters)\n")
+    if len(name_entry) < 3:
+        return enter_name()
+    else:
+        return name_entry
 
 
 # Amended following discussion with mentor
@@ -15,7 +27,7 @@ def text_input():
     """
     Function to accept input when user needs to make a choice
     """
-    choice = input("Please choose an option:- \n")
+    choice = input("Please choose an option:- (A/B)\n")
     choice_lc = choice.lower()
     if choice_lc not in ['a', 'b']:
         print(invalid_choice)
@@ -33,7 +45,8 @@ def game_start():
     time.sleep(1)
     print(INTRO_IMAGE)
     time.sleep(1)
-    name = input("Please enter your name:- \n")
+    global name
+    name = enter_name()
     time.sleep(1)
     print(f"\nWelcome {name}\n")
     print(INTRO_TEXT)
@@ -92,13 +105,13 @@ def play_again():
     Asks whether user would like to play again and restarts game if required,
     upon game over or game completion
     """
-    continue_choice = input("Want to play again? Y/N\n")
+    continue_choice = input(f"Want to play again {name}? Y/N\n")
     if continue_choice in ["y", "Y"]:
         global current_scenario_index
         current_scenario_index = -1
         game_start()
     elif continue_choice in ["n", "N"]:
-        print("\nNo worries, see you later!")
+        print(f"\nNo worries {name}, see you later!")
     else:
         print(invalid_choice)
         return play_again()

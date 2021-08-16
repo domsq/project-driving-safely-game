@@ -113,7 +113,7 @@ The game has been tested using the following browsers:<br>
 I played through the game multiple times from beginning to end to ensure the logic flows as expected. I also had my wife test the game to make sure it ran okay for her. 
 When tested on a PC, the game displays as expected and functions as required. 
 
-The game was also tested on both Samsung Galaxy S20 FE 5G and Oppo Find X2 Lite handsets and while it is playable on a mobile phone, it is best experienced using a PC browser. 
+The game was also tested on both Samsung Galaxy S20 FE 5G and Oppo Find X2 Lite handsets and while it is playable on a mobile phone, it is best experienced using a PC browser. This is likely due to the nature of a terminal type interface. 
 
 I tested that when presented with a choice in the game, the text input has to be a valid option as otherwise you are presented with a "Not a valid choice, please try again" message. You are then prompted to input text again, until a valid choice has been entered.
 
