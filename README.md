@@ -2,6 +2,8 @@
 
 Driving Safely is a game where users attempt to make it successfully through all the scenarios presented, by making the right choice, to reach the destination safely. It is a blend of an interactive story with a quiz to test the user's knowledge of road rules and traffic safety. However, unlike a quiz where you would just receive a score at the end, with this game making the wrong choice can end badly so choose wisely. The game is CLI based so the user would type in the required answer. 
 
+![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)
+
 [Link to deployed site](https://driving-safely.herokuapp.com/)
 
 ## UX
@@ -22,7 +24,7 @@ As shown in the logic flow below, if the user makes the correct choice they prog
 
 ![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/flow_diagram.JPG)
 
-As the game is command line based, there are no graphics or colour, etc present however I have inserted some ascii art to make the display a bit more visually pleasing for the user. 
+As the game is command line based, there are no graphics or colour, etc present however I have inserted some ASCII art to make the display a bit more visually pleasing for the user. 
 
 To tidy up the look of the run.py file, I moved the scenarios content and ASCII art and messages to the files config.py and constants.py respectively. This was a good suggestion made by my mentor. 
 
@@ -55,7 +57,7 @@ It also has an intro message, welcoming the user to the game and briefly explain
 
 ![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)
 
-Below the intro message is an ascii art image followed by a prompt for the user to enter a name:
+Below the intro message is an ASCII art image followed by a prompt for the user to enter a name:
 
 ![Image of intro graphic](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_image.JPG)
 
@@ -90,9 +92,9 @@ Upon either a game over condition or successful game completion, the user is pre
 - Gitpod - IDE used for development, incorporates git version control
 - GitHub - Repository where code is kept and also git version control
 - Heroku - Platform through which the game is deployed
-- [fsymbols](https://fsymbols.com/text-art/) - Used for creation of ascii word art
-- [Text to ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - Used for creation of ascii word art
-- [Ascii Art converter](https://manytools.org/hacker-tools/convert-images-to-ascii-art/) - Used for creation of ascii art image
+- [fsymbols](https://fsymbols.com/text-art/) - Used for creation of ASCII word art
+- [Text to ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - Used for creation of ASCII word art
+- [ASCII Art converter](https://manytools.org/hacker-tools/convert-images-to-ascii-art/) - Used for creation of ASCII art image
 
 ## Testing
 
@@ -165,13 +167,21 @@ My game was deployed via Heroku as follows:
 
 ### Content
 
-
+I made use of the following resources when putting together the scenarios for the game:<br>
+https://www.test-questions.com/driving-theory-test.php<br>
+https://highwaycodetest.co.uk/most-difficult-theory-test-questions/<br>
+The 2015 Edition of The Official Highway Code (ISBN 978-0-11-553342-6)
 
 ### Media
 
+I used the following image to convert into ASCII art for the intro image:<br>
+https://commons.wikimedia.org/wiki/File:Steering-wheel.svg
 
 ### Acknowledgements
 
+Apart from what I learned via the LMS, I also used the following tutorial for guidance:<br>
+https://www.derekshidler.com/how-to-create-a-text-based-adventure-and-quiz-game-in-python/<br><br>
+As always, thanks to my mentor Akshat Garg for his help and advice and also my fellow students on Slack. 
 
 
 
