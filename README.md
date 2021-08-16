@@ -1,6 +1,6 @@
 # Driving Safely
 
-Driving Safely is a game where users attempt to make it successfully through all the scenarios presented, by making the right choice, to reach the destination safely. It is a blend of an interactive story with a quiz to test the user's knowledge of road rules and traffic safety. However, unlike a quiz where you would just receive a score at the end, with this game making the wrong choice can end badly so choose wisely. The game is CLI based so the user would type in the required answer. 
+Driving Safely is a game where users to successfully make it through all the scenarios presented, by choosing the right choice, to reach the destination safely. It is a blend of an interactive story with a quiz to test the user's knowledge of road rules and traffic safety. However, unlike a quiz where you would just receive a score at the end, with this game making the wrong choice can end badly so they need to choose wisely. The game is CLI based so the user would type in the required answer. 
 
 ![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)
 
@@ -8,7 +8,7 @@ Driving Safely is a game where users attempt to make it successfully through all
 
 ## UX
 
-I've designed the game to function like an interactive story, whereby users will be presented with choices as they progress through the scenarios, and depending on the choice made this will determine whether the story progresses or not. Whether a right or wrong choice is made, the game shows a corresponding answer and so is also educational as well. If the user makes a wrong choice and this causes a game over condition, it will also provide details of the relevant part of The Highway Code that explains this. The game is played from an emulated terminal and so is command line based, input is via keyboard entry. 
+I've designed the game to function like an interactive story, whereby users will be presented with choices as they progress through the scenarios, and depending on the choice made this will determine whether the story progresses or not. Whether a right or wrong choice is made, the game shows a corresponding answer and so is educational as well. If the user makes a wrong choice and this causes a game over condition, it will also provide details of the relevant part of The Highway Code that explains why this is. The game is played from an emulated terminal and so is command line based, input is via keyboard entry. 
 
 The game has functions for the following:
 - To handle the game start
@@ -20,7 +20,7 @@ The game has functions for the following:
 - Handling game successful completion
 - Asking whether the user would like to play again and validating the choice made 
 
-As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they don't, then a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all scenarios then a well done message is displayed which also asks whether they'd like to play again. 
+As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they do not, a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all 10 scenarios, a well done message is displayed which also asks whether they'd like to play again. 
 
 ![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/flow_diagram.JPG)
 
