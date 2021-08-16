@@ -47,7 +47,7 @@ User stories as follows:
 
 ### Existing Features
 
-The game has a button at the top to restart it at any point (initial loading of the page starts the app automatically):
+The game has a button at the top to restart it at any point (initial loading of the page starts it automatically):
 
 ![Image of run button](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/run_button.JPG)
 

@@ -15,8 +15,8 @@ def enter_name():
     """
     Function to accept and validate name input
     """
-    name_entry = input("Please enter your name:- (Min 3 characters)\n")
-    if len(name_entry) < 3:
+    name_entry = input("Please enter your name:- (Min 2 characters)\n")
+    if len(name_entry) < 2:
         return enter_name()
     else:
         return name_entry
