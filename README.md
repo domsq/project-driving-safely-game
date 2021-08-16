@@ -10,18 +10,21 @@ I've designed the game to function like an interactive story, whereby users will
 
 The game has functions for the following:
 - To handle the game start
+- Input for a user name with validation
 - Text input with validation when having to make a choice
 - Loading of the next scenario
 - Displaying of current scenario content and evaluating the choice made
 - Handling a game over condition 
 - Handling game successful completion
-- Asking whether the user would like to play again 
+- Asking whether the user would like to play again and validating the choice made 
 
 As shown in the logic flow below, if the user makes the correct choice they progress onto the next scenario but if they don't, then a game over condition occurs. The user is then asked whether they'd like to try again. If the user successfully gets through all scenarios then a well done message is displayed which also asks whether they'd like to play again. 
 
 ![Image of flow diagram](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/flow_diagram.JPG)
 
 As the game is command line based, there are no graphics or colour, etc present however I have inserted some ascii art to make the display a bit more visually pleasing for the user. 
+
+To tidy up the look of the run.py file, I moved the scenarios content and ASCII art and messages to the files config.py and constants.py respectively. This was a good suggestion made by my mentor. 
 
 User stories as follows:
 
@@ -83,10 +86,10 @@ Upon either a game over condition or successful game completion, the user is pre
 - HTML - Required for the emulated terminal as provided by Code Institute
 - CSS - Required for the emulated terminal as provided by Code Institute
 - JavaScript - Required for the emulated terminal as provided by Code Institute
-- Python - Language that the app is written in
+- Python - Language that the game is written in
 - Gitpod - IDE used for development, incorporates git version control
 - GitHub - Repository where code is kept and also git version control
-- Heroku - Platform through which app is deployed
+- Heroku - Platform through which the game is deployed
 - [fsymbols](https://fsymbols.com/text-art/) - Used for creation of ascii word art
 - [Text to ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - Used for creation of ascii word art
 - [Ascii Art converter](https://manytools.org/hacker-tools/convert-images-to-ascii-art/) - Used for creation of ascii art image
@@ -119,20 +122,44 @@ I tested that when presented with a choice in the game, the text input has to be
 
 The scenarios are loaded in turn as expected and getting through all of them successfully triggers a game completion condition. If a wrong choice is picked, the game over condition is triggered. 
 
+Upon either game over or game completion, you are prompted as to whether you'd like to play again. If "y" is selected, this restarts the game and if "n" is selected, this ends the program. If an invalid choice is made, you are prompted to choose an option until a valid choice is selected.
+
 ### Bugs 
 
 While creating my application, the following bugs popped up:<br>
 - Initially when setting up the logic to evaluate the user choices for the scenarios, I tried to use syntax such as "if choice == "a" or "A". This doesn't work, so I rather set input to be made lowercase prior to being evaluated.
 - Another issue I encountered was getting text to display correctly when in Heroku, without any wrapping of words being split part way through. This was corrected through carefully limiting how much text is shown per line.
 - When initially trying to reference the dictionary keys for the scenario objects, from within the show_scenario function, this wouldn't work due to my forgetting the required "[ ]" characters. Once this was corrected, the scenarios would then load as expected.
-- When creating and testing the play_again function, it didn't initially work due to the fact that it wasn't resetting the scenario index each time, so the value was getting out of sync. This was corrected through referencing the global variable for the scenario index and setting it accordingly.
+- When creating and testing the play_again function, it didn't initially work due to the fact that it wasn't resetting the scenario index each time, so the value was getting out of sync. This was corrected through referencing the global variable for the scenario index and setting it accordingly for a game restart.
 
 
 ### Validator Testing
 
+All three of the Python files (config.py, constants.py, run.py) show no errors or warnings when run through a PEP8 checker:
+
+- config.py:<br><br>
+![Image of config.py validation](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/config_py_validation.JPG)<br><br>
+- constants.py:<br><br>
+![Image of constants.py validation](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/constants_py_validation.JPG)<br><br>
+- run.py:<br><br>
+![Image of run.py validation](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/run_py_validation.JPG)<br><br>
 
 ## Deployment
 
+My game was deployed via Heroku as follows:
+- From the terminal in Gitpod, type the following command: "pip3 freeze > requirements.txt"
+- Perform a git add, commit and push.
+- Navigate to https://dashboard.heroku.com/apps and login.
+- Select New > Create new app.
+- For app name type "driving-safely" and for region choose "Europe". Click "Create app".
+- Once the app has been created, select it from the dashboard and then navigate to Settings > Buildpacks.
+- Click "Add buildpack" and then add the following in turn: heroku/python ; heroku/nodejs.
+- Browse to the "Deploy" section.
+- For "Deployment method" select GitHub. If access hasn't already been configured, do this from Account settings > Applications > Third-party Services. 
+- Search for the required repository, in this case "project-driving-safely-game", then once found click "Connect".
+- Scroll down to "Automatic deploys", ensure the branch selected is "main" and then click "Enable Automatic Deploys".
+- Each time a push is made to the repository "project-driving-safely-game", Heroku deploys an updated version of the app.
+- To obtain the deployed link, browse to "Activity" from within the app on Heroku, select "View build log" for the most recent deployment version and find the link at the bottom of the output.  
 
 ## Credits 
 
