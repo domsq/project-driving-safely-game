@@ -4,7 +4,7 @@ Driving Safely is a game where users attempt to successfully get through all the
 
 ![Image of intro message](https://raw.githubusercontent.com/domsq/project-driving-safely-game/main/screenshots/intro_message.JPG)
 
-[Link to deployed site](https://driving-safely.herokuapp.com/)
+[Link to deployed site](https://driving-safely.onrender.com/)
 
 ## UX
 
